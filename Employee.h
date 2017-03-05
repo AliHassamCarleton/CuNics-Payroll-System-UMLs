@@ -18,8 +18,4 @@ class Employee{
 		Role role;
 		
 
-
-
-
-
 }
