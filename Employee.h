@@ -15,6 +15,7 @@ class Employee{
 	protected:
 		string name;
 		int IDNumber;
+		Role role;
 		
 
 

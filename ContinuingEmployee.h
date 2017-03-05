@@ -10,10 +10,14 @@ class ContinuingEmployee: public Employee{
 
 	public:
 		ContinuingEmployee();
+		giveRaisePercent(float);
+		giveRaiseAmount(float);
+		
 		
 
 	protected:
 		float salary;
+		boolean onLeave=false;
 		
 
 
