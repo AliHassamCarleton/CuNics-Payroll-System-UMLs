@@ -4,7 +4,7 @@ using namespace std;
 
 Role::Role(RoleTime r){
 
-	RoleTime= r;
+	roletime= r;
 	
 
 
