@@ -2,10 +2,9 @@
 using namespace std;
 #include "ContinuingEmployee.h"
 
-ContinuingEmployee::ContinuingEmployee(string employeeName){
+ContinuingEmployee::ContinuingEmployee(float contSalary): Employee (name, ) {
 
-	name= employeename;
-
+	salary= contSalary;
 
 
 }
