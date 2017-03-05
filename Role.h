@@ -10,7 +10,7 @@ typedef enum { FULLTIME, PART_TIME } RoleTime;
 class Role{
 
 	public:
-
+		Role (RoleTime);
 
 
 	protected:

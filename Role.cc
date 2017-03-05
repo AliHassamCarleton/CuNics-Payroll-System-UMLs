@@ -2,9 +2,9 @@
 using namespace std;
 #include "Role.h"
 
-Role::Role(){
+Role::Role(RoleTime r){
 
-	
+	RoleTime= r;
 	
 
 
