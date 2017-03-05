@@ -4,7 +4,7 @@ using namespace std;
 
 Employee::Employee(string employeeName){
 
-	name= name;
+	name= employeename;
 
 
 
