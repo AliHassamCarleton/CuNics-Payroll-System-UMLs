@@ -7,7 +7,7 @@
 class Ra::public Role{
 
 	public:
-		Ra();
+		Ra(float);
 
 	protected:
 		float pay; 
