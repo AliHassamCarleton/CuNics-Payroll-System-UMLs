@@ -70,27 +70,26 @@ bool Employee::approveMultipleRoles(Role* role){
 
 	int count=0;
 
-	while(role[count]!=NULL){
+	while(roles[count]!=NULL){
 
-		if(role[count]->getRoleName()==role->getRoleName())//already has this role
+		if(roles[count]->getRoleName()==role->getRoleName())//already has this role
 			return false;
 
-		else if(role->getRoleName=="faculty"||role[count]->getRoleName()=="faculty")
+		else if(role->getRoleName()=="faculty"||roles[count]->getRoleName()=="faculty")
 			return false; //faculty cannot have multiple roles
 		else
-			count++
+			count++;
 		
 	}
 
 	return true;
 
-{
+}
 	
 
 
 
-void Employee::addRole(Role* role)
-{
+void Employee::addRole(Role* role){
 
   bool check1, check2, multicheck;
 
@@ -101,7 +100,7 @@ void Employee::addRole(Role* role)
   if (check1==false||check2==false)//both conditions havent been met
   	return;
 
-  if (size+1 >= MAX_ROLL)
+  if (size+1 >= 3)
     return;
 
   roles[size++] = role;
