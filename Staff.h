@@ -1,20 +1,20 @@
 
-#ifndef TA_H
-#define TA_H
+#ifndef STAFF_H
+#define STAFF_H
 
 #include "defs.h"
 #include "Role.h"
 
-
-class Ta::public Role{
+class Staff::public Role{
 
 	public:
-		Ta(float);
+		Staff(Role_Time, float);
 		float getRolePay();
 
 	protected:
 		float pay; 
 	
+
 
 };
 

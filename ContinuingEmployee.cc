@@ -2,29 +2,44 @@
 using namespace std;
 #include "ContinuingEmployee.h"
 
-ContinuingEmployee::ContinuingEmployee(float contSalary): Employee (name) {
+ContinuingEmployee::ContinuingEmployee(Role r): Employee (name, "continuing", r) {
 
-	salary= contSalary;
+
+	salary=  0; //get the salary from appropriate roles
 	
 
 
 }
 
-bool ContinuingEmployee::flipLeave(){
+
+
+
+void ContinuingEmployee::setLeave(float percentage){
 
 	if (onLeave==true)
 		onLeave=false;
 	else
-		oneLeave=true;		
+		oneLeave=true;	
 
+	leavePercentage= percentage;
 
 }
 
 
+void ContinuingEmployee::getSalary(){
+
+	if(onLeave==true)
+		return salary*leavePercentage;
+	
+
+}
+
+
+
 void ContinuingEmployee::giveRaisePercent(float percent){
 
-	salary+= salary*percent;
 
+	salary+= getAllPay()*percent;
 
 }
 
@@ -34,7 +49,6 @@ void ContinuingEmployee::giveRaiseAmount(float amount){
 	salary+= amount;
 
 }
-
 
 
 
