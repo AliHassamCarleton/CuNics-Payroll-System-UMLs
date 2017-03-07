@@ -8,9 +8,8 @@
 class TermEmployee: public Employee{
 
 	public:
-		TermEmployee();
+		TermEmployee(string, string, string, float, Role);
 		
-
 	protected:
 		string startDate;
 		string endDate;
