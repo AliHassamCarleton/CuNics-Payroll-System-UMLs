@@ -3,6 +3,7 @@
 #define CONTINUINGEMPLOYEE_H
 
 #include "defs.h"
+#include "Employee.h"
 
 
 
@@ -10,17 +11,17 @@ class ContinuingEmployee: public Employee{
 
 	public:
 		ContinuingEmployee(Role);
-		giveRaisePercent(float);
-		giveRaiseAmount(float);
-		
+		void giveRaisePercent(float);
+		void giveRaiseAmount(float);
+		void setLeave(float);
+		float getSalary();
 		
 
 	protected:
 		float salary;
-		boolean onLeave=false;
+		float leavePercentage;
+		boolean onLeave;
 		
-
-
 
 
 

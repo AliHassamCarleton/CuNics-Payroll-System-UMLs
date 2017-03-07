@@ -20,20 +20,20 @@ Employee::Employee(string employeeName, string empStyle, Role* role){
 
 boolean Employee::approveRole(Role* role){
 
-	if(role->getRoleName=="Staff"){
+	if(role->getRoleName()=="Staff"){
 
 		//everything flies
 		return true;
 	}
-	else if(role->getRoleName=="Ra" || role->getRoleName=="Ta"){
+	else if(role->getRoleName()=="Ra" || role->getRoleName()=="Ta"){
 
 		//part time ! Term
-		if(role->getRoleTime()==PART_TIME)&&employeeStyle=="term")
+		if(role->getRoleTime()==PART_TIME)&&employeeStyle()=="term")
 			return true;
 
 
 	}
-	else if(role->getRoleName=="Faculty"){
+	else if(role->getRoleName()=="Faculty"){
 
 		//full time ! Term or continuing
 		if(role->getRoleTime()==FULLTIME)
@@ -61,7 +61,7 @@ float Employee::getAllPay(){
 
   	total+= role[count]->getRolePay();
 
-
+  	count++;
   }
 
 
@@ -100,9 +100,7 @@ void Employee::addRole(Role* role)
   check1=approveRole(role);//makes sure role for the style of employee is possible
   check2=approveMultipleRoles(role);
 
-  if (check1==true&&check2==true)
-  	//good
-  else
+  if (check1==false||check2==false)//both conditions havent been met
   	return;
 
   if (size+1 >= MAX_ROLL)

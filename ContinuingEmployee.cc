@@ -14,18 +14,26 @@ ContinuingEmployee::ContinuingEmployee(Role r): Employee (name, "continuing", r)
 
 
 
-bool ContinuingEmployee::flipLeave(float percentage){
+void ContinuingEmployee::setLeave(float percentage){
 
 	if (onLeave==true)
 		onLeave=false;
 	else
 		oneLeave=true;	
 
-	if(onLeave==true)
-		salary= salary*percentage;		
-
+	leavePercentage= percentage;
 
 }
+
+
+void ContinuingEmployee::getSalary(){
+
+	if(onLeave==true)
+		return salary*leavePercentage;
+	
+
+}
+
 
 
 void ContinuingEmployee::giveRaisePercent(float percent){

@@ -10,16 +10,11 @@ class Ta::public Role{
 
 	public:
 		Ta(float);
-		float getRolePay(){
-
-	return pay;
-
-}
+		float getRolePay();
 
 	protected:
 		float pay; 
 	
-
 
 };
 

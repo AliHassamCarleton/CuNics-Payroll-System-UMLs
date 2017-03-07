@@ -14,6 +14,10 @@ TermEmployee::TermEmployee(string name, string sDate, string eDate, float rate, 
 
 
 
+float TermEmployee::getSalary(){
 
+	return getAllPay()+biMonthlyRate;
+
+}
 
 

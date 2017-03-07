@@ -11,10 +11,6 @@ class Staff::public Role{
 		Staff(Role_Time, float);
 		float getRolePay();
 
-	return pay;
-
-}
-
 	protected:
 		float pay; 
 	

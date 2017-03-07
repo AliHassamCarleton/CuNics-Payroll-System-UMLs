@@ -12,9 +12,9 @@ class Employee{
 		addRole(Role*);
 		approveRole(Role*);
 		approveMultipleRoles(Role*);
+		virtual float getSalary()  = 0;
+
 	
-
-
 	protected:
 		string name;
 		string employeeStyle;
@@ -24,4 +24,5 @@ class Employee{
 		
 		
 
-}
+};
+#endif

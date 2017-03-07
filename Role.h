@@ -18,6 +18,6 @@ class Role{
 		string rolename;
 
 
-}
+};
 
 #endif
